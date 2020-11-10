@@ -160,7 +160,6 @@ const followTheLight = () => {
 };
 
 export default {
-  students,
   livingStudents,
   dearlyBeloved,
   followTheLight,
