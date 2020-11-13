@@ -5,7 +5,7 @@ const studentShape = PropTypes.shape({
   imgUrl: PropTypes.string.isRequired,
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
-  isDead: PropTypes.boolean.isRequired,
+  isDead: PropTypes.bool.isRequired,
 });
 
 export default studentShape;

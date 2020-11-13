@@ -150,13 +150,9 @@ const dearlyBeloved = () => {
   return belovedDearly;
 };
 
-const followTheLight = () => {
-  const followLight = students.filter((id) => {
-    if (students.isDead !== true) {
-      return students.isDead === true;
-    }
-    return followLight;
-  });
+const followTheLight = (id) => {
+  const deadKids = students.find((student) => id === student.id);
+  deadKids.isDead = true;
 };
 
 export default {

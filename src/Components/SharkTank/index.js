@@ -11,7 +11,7 @@ class SharkTank extends Component {
     const { students } = this.state;
     console.warn(students);
     const renderLivingStudentsToDom = () => students.map((student) => <LivingStudent students={student}/>);
-    return <div>
+    return <div className='d-flex flex-wrap m-5'>
       {renderLivingStudentsToDom()}
       </div>;
   }
