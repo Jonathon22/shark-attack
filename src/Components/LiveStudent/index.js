@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle,
+  Card, CardBody, CardImg,
+  CardTitle,
 } from 'reactstrap';
+import studentShape from '../../Helpers/Propz/studentShape';
 
 class LivingStudent extends Component {
-  render() {
-    const { students } = this.props;
+ static propTypes = {
+   students: studentShape,
+ }
 
-    return (
-      <div>
-      <Card className={students.id}>
-        <CardImg top width="20%" src={students.imgUrl} alt="Card image cap" />
+ render() {
+   const { students } = this.props;
+
+   return (
+      <div className='container col-2'>
+      <Card className='LivingStudentCard'>
+        <CardImg className='cardImg' top width="20%" src={students.imgUrl} alt="Card image cap" />
         <CardBody>
           <CardTitle tag="h5">{students.firstName} {students.lastName}</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">Card subtitle</CardSubtitle>
-          <CardText>{students.isDead}</CardText>
-        </CardBody>
+          </CardBody>
       </Card>
     </div>
-    );
-  }
+   );
+ }
 }
 
 export default LivingStudent;
